@@ -5,6 +5,316 @@ AllCops:
     - 'tmp/**/*'
   TargetRubyVersion: 2.1
 
+#################### Layout ##############################
+
+Layout/AccessModifierIndentation:
+  Description: Check indentation of private/protected visibility modifiers.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#indent-public-private-protected
+  Enabled: true
+  EnforcedStyle: indent
+  SupportedStyles:
+  - outdent
+  - indent
+
+Layout/AlignArray:
+  Description: Align the elements of an array literal if they span more than one line.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#align-multiline-arrays
+  Enabled: true
+
+Layout/AlignHash:
+  Description: Align the elements of a hash literal if they span more than one line.
+  Enabled: false
+  EnforcedHashRocketStyle: key
+  EnforcedColonStyle: key
+  EnforcedLastArgumentHashStyle: always_inspect
+  SupportedLastArgumentHashStyles:
+  - always_inspect
+  - always_ignore
+  - ignore_implicit
+  - ignore_explicit
+
+Layout/AlignParameters:
+  Description: Align the parameters of a method call if they span more than one line.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-double-indent
+  Enabled: true
+  EnforcedStyle: with_first_parameter
+  SupportedStyles:
+  - with_first_parameter
+  - with_fixed_indentation
+
+Layout/BlockEndNewline:
+  Description: Put end statement of multiline block on its own line.
+  Enabled: true
+
+Layout/CaseIndentation:
+  Description: Indentation of when in a case/when/[else/]end.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#indent-when-to-case
+  Enabled: true
+  EnforcedStyle: case
+  SupportedStyles:
+  - case
+  - end
+  IndentOneStep: false
+
+Layout/CommentIndentation:
+  Description: Indentation of comments.
+  Enabled: true
+
+Layout/DotPosition:
+  Description: Checks the position of the dot in multi-line method calls.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains
+  Enabled: true
+  EnforcedStyle: trailing
+  SupportedStyles:
+  - leading
+  - trailing
+
+Layout/ElseAlignment:
+  Description: Align elses and elsifs correctly.
+  Enabled: true
+
+Layout/EmptyLineBetweenDefs:
+  Description: Use empty lines between defs.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#empty-lines-between-methods
+  Enabled: true
+  AllowAdjacentOneLineDefs: false
+
+Layout/EmptyLines:
+  Description: Don't use several empty lines in a row.
+  Enabled: true
+
+Layout/EmptyLinesAroundAccessModifier:
+  Description: Keep blank lines around access modifiers.
+  Enabled: true
+
+Layout/EmptyLinesAroundBlockBody:
+  Description: Keeps track of empty lines around block bodies.
+  Enabled: true
+  EnforcedStyle: no_empty_lines
+  SupportedStyles:
+  - empty_lines
+  - no_empty_lines
+
+Layout/EmptyLinesAroundClassBody:
+  Description: Keeps track of empty lines around class bodies.
+  Enabled: true
+  EnforcedStyle: no_empty_lines
+  SupportedStyles:
+  - empty_lines
+  - no_empty_lines
+
+Layout/EmptyLinesAroundMethodBody:
+  Description: Keeps track of empty lines around method bodies.
+  Enabled: true
+
+Layout/EmptyLinesAroundModuleBody:
+  Description: Keeps track of empty lines around module bodies.
+  Enabled: true
+  EnforcedStyle: no_empty_lines
+  SupportedStyles:
+  - empty_lines
+  - no_empty_lines
+
+Layout/EndOfLine:
+  Description: Use Unix-style line endings.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#crlf
+  Enabled: true
+
+Layout/ExtraSpacing:
+  Description: Do not use unnecessary spacing.
+  Enabled: true
+
+Layout/FirstParameterIndentation:
+  Description: Checks the indentation of the first parameter in a method call.
+  Enabled: true
+  EnforcedStyle: special_for_inner_method_call_in_parentheses
+  SupportedStyles:
+  - consistent
+  - special_for_inner_method_call
+  - special_for_inner_method_call_in_parentheses
+
+Layout/IndentArray:
+  Description: Checks the indentation of the first element in an array literal.
+  Enabled: true
+
+Layout/IndentHash:
+  Description: Checks the indentation of the first key in a hash literal.
+  Enabled: true
+  EnforcedStyle: special_inside_parentheses
+  SupportedStyles:
+  - special_inside_parentheses
+  - consistent
+
+Layout/IndentationConsistency:
+  Description: Keep indentation straight.
+  Enabled: true
+
+Layout/IndentationWidth:
+  Description: Use 2 spaces for indentation.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-indentation
+  Enabled: true
+  Width: 2
+
+Layout/LeadingCommentSpace:
+  Description: Comments should start with a space.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#hash-space
+  Enabled: true
+
+Layout/MultilineBlockLayout:
+  Description: Ensures newlines after multiline block do statements.
+  Enabled: true
+
+Layout/MultilineMethodCallIndentation:
+  Description: Checks indentation of method calls with the dot operator
+    that span more than one line.
+  Enabled: true
+  EnforcedStyle: indented
+  SupportedStyles:
+    - aligned
+    - indented
+
+Layout/MultilineOperationIndentation:
+  Description: Checks indentation of binary operations that span more than one line.
+  Enabled: true
+  EnforcedStyle: indented
+  SupportedStyles:
+  - aligned
+  - indented
+
+Layout/SpaceAfterColon:
+  Description: Use spaces after colons.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-operators
+  Enabled: true
+
+Layout/SpaceAfterComma:
+  Description: Use spaces after commas.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-operators
+  Enabled: true
+
+Layout/SpaceAfterMethodName:
+  Description: Do not put a space between a method name and the opening parenthesis
+    in a method definition.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#parens-no-spaces
+  Enabled: true
+
+Layout/SpaceAfterNot:
+  Description: Tracks redundant space after the ! operator.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-space-bang
+  Enabled: true
+
+Layout/SpaceAfterSemicolon:
+  Description: Use spaces after semicolons.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-operators
+  Enabled: true
+
+Layout/SpaceAroundBlockParameters:
+  Description: Checks the spacing inside and after block parameters pipes.
+  Enabled: true
+  EnforcedStyleInsidePipes: no_space
+  SupportedStyles:
+  - space
+  - no_space
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  Description: Checks that the equals signs in parameter default assignments have
+    or don't have surrounding space depending on configuration.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-around-equals
+  Enabled: true
+  EnforcedStyle: space
+  SupportedStyles:
+  - space
+  - no_space
+
+Layout/SpaceAroundKeyword:
+  Description: Use spaces after if/elsif/unless/while/until/case/when.
+  Enabled: true
+
+Layout/SpaceAroundOperators:
+  Description: Use spaces around operators.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-operators
+  Enabled: true
+
+Layout/SpaceBeforeBlockBraces:
+  Description: Checks that the left block brace has or doesn't have space before it.
+  Enabled: true
+  EnforcedStyle: space
+  SupportedStyles:
+  - space
+  - no_space
+
+Layout/SpaceBeforeComma:
+  Description: No spaces before commas.
+  Enabled: true
+
+Layout/SpaceBeforeComment:
+  Description: Checks for missing space between code and a comment on the same line.
+  Enabled: true
+
+Layout/SpaceBeforeFirstArg:
+  Description: Checks that exactly one space is used between a method name and the
+    first argument for method calls without parentheses.
+  Enabled: true
+
+Layout/SpaceBeforeSemicolon:
+  Description: No spaces before semicolons.
+  Enabled: true
+
+Layout/SpaceInsideBlockBraces:
+  Description: Checks that block braces have or don't have surrounding space. For
+    blocks taking parameters, checks that the left brace has or doesn't have trailing
+    space.
+  Enabled: true
+  EnforcedStyle: space
+  SupportedStyles:
+  - space
+  - no_space
+  EnforcedStyleForEmptyBraces: no_space
+  SpaceBeforeBlockParameters: true
+
+Layout/SpaceInsideBrackets:
+  Description: No spaces after [ or before ].
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-spaces-braces
+  Enabled: true
+
+Layout/SpaceInsideHashLiteralBraces:
+  Description: Use spaces inside hash literal braces - or don't.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-operators
+  Enabled: true
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+  SupportedStyles:
+  - space
+  - no_space
+
+Layout/SpaceInsideParens:
+  Description: No spaces after ( or before ).
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-spaces-braces
+  Enabled: true
+
+Layout/SpaceInsideRangeLiteral:
+  Description: No spaces inside range literals.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-space-inside-range-literals
+  Enabled: true
+
+Layout/Tab:
+  Description: No hard tabs.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-indentation
+  Enabled: true
+
+Layout/TrailingBlankLines:
+  Description: Checks trailing blank lines and final newline.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#newline-eof
+  Enabled: true
+  EnforcedStyle: final_newline
+  SupportedStyles:
+  - final_newline
+  - final_blank_line
+
+Layout/TrailingWhitespace:
+  Description: Avoid trailing whitespace.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-trailing-whitespace
+  Enabled: true
+
 #################### Lint ################################
 
 Lint/AmbiguousOperator:
@@ -84,10 +394,6 @@ Lint/EndInMethod:
 Lint/EnsureReturn:
   Description: 'Do not use return in an ensure block.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-return-ensure'
-  Enabled: true
-
-Lint/Eval:
-  Description: 'The use of eval represents a serious security risk.'
   Enabled: true
 
 Lint/FormatParameterMismatch:
@@ -373,16 +679,13 @@ Rails/Validation:
   Include:
   - app/models/**/*.rb
 
-################## Style #################################
+################## Security ##############################
 
-Style/AccessModifierIndentation:
-  Description: Check indentation of private/protected visibility modifiers.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#indent-public-private-protected
+Security/Eval:
+  Description: 'The use of eval represents a serious security risk.'
   Enabled: true
-  EnforcedStyle: indent
-  SupportedStyles:
-  - outdent
-  - indent
+
+################## Style #################################
 
 Style/AccessorMethodName:
   Description: Check the naming of accessor methods for get_/set_.
@@ -392,32 +695,6 @@ Style/Alias:
   Description: Use alias_method instead of alias.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#alias-method
   Enabled: false
-
-Style/AlignArray:
-  Description: Align the elements of an array literal if they span more than one line.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#align-multiline-arrays
-  Enabled: true
-
-Style/AlignHash:
-  Description: Align the elements of a hash literal if they span more than one line.
-  Enabled: false
-  EnforcedHashRocketStyle: key
-  EnforcedColonStyle: key
-  EnforcedLastArgumentHashStyle: always_inspect
-  SupportedLastArgumentHashStyles:
-  - always_inspect
-  - always_ignore
-  - ignore_implicit
-  - ignore_explicit
-
-Style/AlignParameters:
-  Description: Align the parameters of a method call if they span more than one line.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-double-indent
-  Enabled: true
-  EnforcedStyle: with_first_parameter
-  SupportedStyles:
-  - with_first_parameter
-  - with_fixed_indentation
 
 Style/AndOr:
   Description: Use &&/|| instead of and/or.
@@ -473,10 +750,6 @@ Style/BlockDelimiters:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#single-line-blocks
   Enabled: true
 
-Style/BlockEndNewline:
-  Description: Put end statement of multiline block on its own line.
-  Enabled: true
-
 # This could be confusing: some_method(a, b, c: true, d: false) are there 3 or 4 args?
 Style/BracesAroundHashParameters:
   Description: Enforce braces style around hash parameters.
@@ -491,16 +764,6 @@ Style/CaseEquality:
   Description: Avoid explicit use of the case equality operator(===).
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-case-equality
   Enabled: false
-
-Style/CaseIndentation:
-  Description: Indentation of when in a case/when/[else/]end.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#indent-when-to-case
-  Enabled: true
-  EnforcedStyle: case
-  SupportedStyles:
-  - case
-  - end
-  IndentOneStep: false
 
 Style/CharacterLiteral:
   Description: Checks for uses of character literals.
@@ -572,10 +835,6 @@ Style/CommentAnnotation:
   - HACK
   - REVIEW
 
-Style/CommentIndentation:
-  Description: Indentation of comments.
-  Enabled: true
-
 Style/ConstantName:
   Description: Constants should use SCREAMING_SNAKE_CASE.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#screaming-snake-case
@@ -586,7 +845,7 @@ Style/DefWithParentheses:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#method-parens
   Enabled: true
 
-Style/DeprecatedHashMethods:
+Style/PreferredHashMethods:
   Description: Checks for use of deprecated Hash methods.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#hash-key
   Enabled: false
@@ -594,15 +853,6 @@ Style/DeprecatedHashMethods:
 Style/Documentation:
   Description: Document classes and non-namespace modules.
   Enabled: false
-
-Style/DotPosition:
-  Description: Checks the position of the dot in multi-line method calls.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains
-  Enabled: true
-  EnforcedStyle: trailing
-  SupportedStyles:
-  - leading
-  - trailing
 
 Style/DoubleNegation:
   Description: Checks for uses of double negation (!!).
@@ -613,55 +863,9 @@ Style/EachWithObject:
   Description: Prefer `each_with_object` over `inject` or `reduce`.
   Enabled: false
 
-Style/ElseAlignment:
-  Description: Align elses and elsifs correctly.
-  Enabled: true
-
 Style/EmptyElse:
   Description: Avoid empty else-clauses.
   Enabled: true
-
-Style/EmptyLineBetweenDefs:
-  Description: Use empty lines between defs.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#empty-lines-between-methods
-  Enabled: true
-  AllowAdjacentOneLineDefs: false
-
-Style/EmptyLines:
-  Description: Don't use several empty lines in a row.
-  Enabled: true
-
-Style/EmptyLinesAroundAccessModifier:
-  Description: Keep blank lines around access modifiers.
-  Enabled: true
-
-Style/EmptyLinesAroundBlockBody:
-  Description: Keeps track of empty lines around block bodies.
-  Enabled: true
-  EnforcedStyle: no_empty_lines
-  SupportedStyles:
-  - empty_lines
-  - no_empty_lines
-
-Style/EmptyLinesAroundClassBody:
-  Description: Keeps track of empty lines around class bodies.
-  Enabled: true
-  EnforcedStyle: no_empty_lines
-  SupportedStyles:
-  - empty_lines
-  - no_empty_lines
-
-Style/EmptyLinesAroundMethodBody:
-  Description: Keeps track of empty lines around method bodies.
-  Enabled: true
-
-Style/EmptyLinesAroundModuleBody:
-  Description: Keeps track of empty lines around module bodies.
-  Enabled: true
-  EnforcedStyle: no_empty_lines
-  SupportedStyles:
-  - empty_lines
-  - no_empty_lines
 
 Style/EmptyLiteral:
   Description: Prefer literals to Array.new/Hash.new/String.new.
@@ -682,34 +886,16 @@ Style/EndBlock:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-END-blocks
   Enabled: true
 
-Style/EndOfLine:
-  Description: Use Unix-style line endings.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#crlf
-  Enabled: true
-
 Style/EvenOdd:
   Description: Favor the use of Fixnum#even? && Fixnum#odd?
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#predicate-methods
   Enabled: false
-
-Style/ExtraSpacing:
-  Description: Do not use unnecessary spacing.
-  Enabled: true
 
 Style/FileName:
   Description: Use snake_case for source file names.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-files
   Enabled: false
   Exclude: []
-
-Style/FirstParameterIndentation:
-  Description: Checks the indentation of the first parameter in a method call.
-  Enabled: true
-  EnforcedStyle: special_for_inner_method_call_in_parentheses
-  SupportedStyles:
-  - consistent
-  - special_for_inner_method_call
-  - special_for_inner_method_call_in_parentheses
 
 Style/FlipFlop:
   Description: Checks for flip flops
@@ -768,28 +954,6 @@ Style/IfWithSemicolon:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-semicolon-ifs
   Enabled: false
 
-Style/IndentArray:
-  Description: Checks the indentation of the first element in an array literal.
-  Enabled: true
-
-Style/IndentHash:
-  Description: Checks the indentation of the first key in a hash literal.
-  Enabled: true
-  EnforcedStyle: special_inside_parentheses
-  SupportedStyles:
-  - special_inside_parentheses
-  - consistent
-
-Style/IndentationConsistency:
-  Description: Keep indentation straight.
-  Enabled: true
-
-Style/IndentationWidth:
-  Description: Use 2 spaces for indentation.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-indentation
-  Enabled: true
-  Width: 2
-
 Style/InfiniteLoop:
   Description: Use Kernel#loop for infinite loops.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#infinite-loop
@@ -812,11 +976,6 @@ Style/LambdaCall:
   SupportedStyles:
   - call
   - braces
-
-Style/LeadingCommentSpace:
-  Description: Comments should start with a space.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#hash-space
-  Enabled: true
 
 Style/LineEndConcatenation:
   Description: Use \ instead of + or << to concatenate two string literals at line
@@ -856,30 +1015,10 @@ Style/ModuleFunction:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#module-function
   Enabled: false
 
-Style/MultilineBlockLayout:
-  Description: Ensures newlines after multiline block do statements.
-  Enabled: true
-
 Style/MultilineIfThen:
   Description: Do not use then for multi-line if/unless.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-then
   Enabled: true
-Style/MultilineMethodCallIndentation:
-  Description: Checks indentation of method calls with the dot operator
-    that span more than one line.
-  Enabled: true
-  EnforcedStyle: indented
-  SupportedStyles:
-    - aligned
-    - indented
-
-Style/MultilineOperationIndentation:
-  Description: Checks indentation of binary operations that span more than one line.
-  Enabled: true
-  EnforcedStyle: indented
-  SupportedStyles:
-  - aligned
-  - indented
 
 Style/MultilineTernaryOperator:
   Description: 'Avoid multi-line ?: (the ternary operator); use if/unless instead.'
@@ -1072,125 +1211,6 @@ Style/SingleLineMethods:
   Enabled: false
   AllowIfMethodIsEmpty: true
 
-Style/SpaceAfterColon:
-  Description: Use spaces after colons.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-operators
-  Enabled: true
-
-Style/SpaceAfterComma:
-  Description: Use spaces after commas.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-operators
-  Enabled: true
-
-Style/SpaceAfterMethodName:
-  Description: Do not put a space between a method name and the opening parenthesis
-    in a method definition.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#parens-no-spaces
-  Enabled: true
-
-Style/SpaceAfterNot:
-  Description: Tracks redundant space after the ! operator.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-space-bang
-  Enabled: true
-
-Style/SpaceAfterSemicolon:
-  Description: Use spaces after semicolons.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-operators
-  Enabled: true
-
-Style/SpaceAroundBlockParameters:
-  Description: Checks the spacing inside and after block parameters pipes.
-  Enabled: true
-  EnforcedStyleInsidePipes: no_space
-  SupportedStyles:
-  - space
-  - no_space
-
-Style/SpaceAroundEqualsInParameterDefault:
-  Description: Checks that the equals signs in parameter default assignments have
-    or don't have surrounding space depending on configuration.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-around-equals
-  Enabled: true
-  EnforcedStyle: space
-  SupportedStyles:
-  - space
-  - no_space
-
-Style/SpaceAroundKeyword:
-  Description: Put a space before the modifier keyword.
-  Enabled: true
-
-Style/SpaceAroundKeyword:
-  Description: Use spaces after if/elsif/unless/while/until/case/when.
-  Enabled: true
-
-Style/SpaceAroundOperators:
-  Description: Use spaces around operators.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-operators
-  Enabled: true
-
-Style/SpaceBeforeBlockBraces:
-  Description: Checks that the left block brace has or doesn't have space before it.
-  Enabled: true
-  EnforcedStyle: space
-  SupportedStyles:
-  - space
-  - no_space
-
-Style/SpaceBeforeComma:
-  Description: No spaces before commas.
-  Enabled: true
-
-Style/SpaceBeforeComment:
-  Description: Checks for missing space between code and a comment on the same line.
-  Enabled: true
-
-Style/SpaceBeforeFirstArg:
-  Description: Checks that exactly one space is used between a method name and the
-    first argument for method calls without parentheses.
-  Enabled: true
-
-Style/SpaceBeforeSemicolon:
-  Description: No spaces before semicolons.
-  Enabled: true
-
-Style/SpaceInsideBlockBraces:
-  Description: Checks that block braces have or don't have surrounding space. For
-    blocks taking parameters, checks that the left brace has or doesn't have trailing
-    space.
-  Enabled: true
-  EnforcedStyle: space
-  SupportedStyles:
-  - space
-  - no_space
-  EnforcedStyleForEmptyBraces: no_space
-  SpaceBeforeBlockParameters: true
-
-Style/SpaceInsideBrackets:
-  Description: No spaces after [ or before ].
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-spaces-braces
-  Enabled: true
-
-Style/SpaceInsideHashLiteralBraces:
-  Description: Use spaces inside hash literal braces - or don't.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-operators
-  Enabled: true
-  EnforcedStyle: space
-  EnforcedStyleForEmptyBraces: no_space
-  SupportedStyles:
-  - space
-  - no_space
-
-Style/SpaceInsideParens:
-  Description: No spaces after ( or before ).
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-spaces-braces
-  Enabled: true
-
-Style/SpaceInsideRangeLiteral:
-  Description: No spaces inside range literals.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-space-inside-range-literals
-  Enabled: true
-
 Style/SpecialGlobalVars:
   Description: Avoid Perl-style global variables.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-cryptic-perlisms
@@ -1230,20 +1250,6 @@ Style/SymbolProc:
   IgnoredMethods:
   - respond_to
 
-Style/Tab:
-  Description: No hard tabs.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-indentation
-  Enabled: true
-
-Style/TrailingBlankLines:
-  Description: Checks trailing blank lines and final newline.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#newline-eof
-  Enabled: true
-  EnforcedStyle: final_newline
-  SupportedStyles:
-  - final_newline
-  - final_blank_line
-
 Style/TrailingCommaInArguments:
   Description: Checks for trailing comma in parameter lists and literals.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas
@@ -1261,11 +1267,6 @@ Style/TrailingCommaInLiteral:
   SupportedStyles:
   - comma
   - no_comma
-
-Style/TrailingWhitespace:
-  Description: Avoid trailing whitespace.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-trailing-whitespace
-  Enabled: true
 
 Style/TrivialAccessors:
   Description: Prefer attr_* methods to trivial readers/writers.
