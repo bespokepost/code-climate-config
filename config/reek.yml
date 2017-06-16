@@ -1,0 +1,18 @@
+Attribute:
+  enabled: false
+
+DuplicateMethodCall:
+  enabled: false
+
+IrresponsibleModule:
+  enabled: false
+
+NilCheck:
+  enabled: false
+
+TooManyStatements:
+  enabled: true
+  exclude:
+  - initialize
+  max_statements: 15
+
