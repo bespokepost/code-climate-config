@@ -16,3 +16,11 @@ TooManyStatements:
   - initialize
   max_statements: 15
 
+"app/controllers":
+  # Rails controllers generally follow a pretty rigid code path that makes instance variables assumption more "safe"
+  InstanceVariableAssumption:
+    enabled: false
+
+  # Generally an indicator that a controller might be too big, but sometimes it's necessary
+  TooManyInstanceVariables:
+    enabled: false
