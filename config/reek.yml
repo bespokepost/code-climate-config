@@ -1,54 +1,58 @@
-Attribute:
-  enabled: false
+---
 
-DuplicateMethodCall:
-  enabled: false
-
-IrresponsibleModule:
-  enabled: false
-
-NilCheck:
-  enabled: false
-
-TooManyStatements:
-  enabled: false
-
-"app/admin/concerns":
-  FeatureEnvy:
-    enabled: false
-  UtilityFunction:
+detectors:
+  Attribute:
     enabled: false
 
-"app/controllers":
-  NestedIterators:
-    max_allowed_nesting: 2
-  UnusedPrivateMethod:
+  DuplicateMethodCall:
     enabled: false
 
-  # Rails controllers generally follow a pretty rigid code path that makes instance variables assumption more "safe"
-  InstanceVariableAssumption:
+  IrresponsibleModule:
     enabled: false
 
-  # Generally an indicator that a controller might be too big, but sometimes it's necessary
-  TooManyInstanceVariables:
+  NilCheck:
     enabled: false
 
-"app/controllers/concerns":
-  FeatureEnvy:
-    enabled: false
-  NestedIterators:
-    max_allowed_nesting: 2
-  UtilityFunction:
+  TooManyStatements:
     enabled: false
 
-"app/helpers":
-  FeatureEnvy:
-    enabled: false
-  UtilityFunction:
-    enabled: false
+directories:
+  "app/admin/concerns":
+    FeatureEnvy:
+      enabled: false
+    UtilityFunction:
+      enabled: false
 
-"app/models/concerns":
-  FeatureEnvy:
-    enabled: false
-  UtilityFunction:
-    enabled: false
+  "app/controllers":
+    NestedIterators:
+      max_allowed_nesting: 2
+    UnusedPrivateMethod:
+      enabled: false
+
+    # Rails controllers generally follow a pretty rigid code path that makes instance variables assumption more "safe"
+    InstanceVariableAssumption:
+      enabled: false
+
+    # Generally an indicator that a controller might be too big, but sometimes it's necessary
+    TooManyInstanceVariables:
+      enabled: false
+
+  "app/controllers/concerns":
+    FeatureEnvy:
+      enabled: false
+    NestedIterators:
+      max_allowed_nesting: 2
+    UtilityFunction:
+      enabled: false
+
+  "app/helpers":
+    FeatureEnvy:
+      enabled: false
+    UtilityFunction:
+      enabled: false
+
+  "app/models/concerns":
+    FeatureEnvy:
+      enabled: false
+    UtilityFunction:
+      enabled: false
