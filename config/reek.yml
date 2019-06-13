@@ -5,7 +5,7 @@ detectors:
     enabled: false
 
   DuplicateMethodCall:
-    enabled: false
+    enabled: true
 
   IrresponsibleModule:
     enabled: false
