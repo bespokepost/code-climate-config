@@ -93,6 +93,10 @@ Layout/ElseAlignment:
   Description: Align elses and elsifs correctly.
   Enabled: true
 
+Layout/EmptyLineAfterGuardClause:
+  Description: Keep blank lines after guard clauses.
+  Enabled: false
+
 Layout/EmptyLineBetweenDefs:
   Description: Use empty lines between defs.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#empty-lines-between-methods
@@ -568,6 +572,10 @@ Metrics/PerceivedComplexity:
 
 ##################### Naming ##################################
 
+Naming/AccessorMethodName:
+  Description: Checks that accessor methods are named properly
+  Enabled: false
+
 Naming/AsciiIdentifiers:
   Description: Use only ascii symbols in identifiers.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#english-identifiers
@@ -599,6 +607,10 @@ Lint/FlipFlop:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-flip-flops
   Enabled: false
 
+Naming/MemoizedInstanceVariableName:
+  Description: Checks for memoized methods whose instance variable name does not match the method name.
+  Enabled: false
+
 Naming/MethodName:
   Description: Use the configured style when naming methods.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-symbols-methods-vars
@@ -618,6 +630,14 @@ Naming/PredicateName:
   - have_
   NamePrefixBlacklist:
   - is_
+
+Naming/RescuedExceptionsVariableName:
+  Description: Checks rescued exceptions variables are named as expected.
+  Enabled: false
+
+Naming/UncommunicativeMethodParamName:
+  Description: Checks method parameter names for how descriptive they are
+  Enabled: false
 
 Naming/VariableName:
   Description: Use the configured style when naming variables.
