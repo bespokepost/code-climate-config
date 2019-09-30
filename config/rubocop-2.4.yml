@@ -93,6 +93,10 @@ Layout/ElseAlignment:
   Description: Align elses and elsifs correctly.
   Enabled: true
 
+Layout/EmptyLineAfterGuardClause:
+  Description: Keep blank lines after guard clauses.
+  Enabled: false
+
 Layout/EmptyLineBetweenDefs:
   Description: Use empty lines between defs.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#empty-lines-between-methods
@@ -102,10 +106,6 @@ Layout/EmptyLineBetweenDefs:
 Layout/EmptyLines:
   Description: Don't use several empty lines in a row.
   Enabled: true
-
-Layout/EmptyLineAfterGuardClause:
-  Description: Keep blank lines after guard clauses.
-  Enabled: false
 
 Layout/EmptyLinesAroundAccessModifier:
   Description: Keep blank lines around access modifiers.
@@ -571,6 +571,7 @@ Metrics/PerceivedComplexity:
   Max: 30
 
 ##################### Naming ##################################
+
 Naming/AccessorMethodName:
   Description: Checks that accessor methods are named properly
   Enabled: false
@@ -606,6 +607,10 @@ Lint/FlipFlop:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-flip-flops
   Enabled: false
 
+Naming/MemoizedInstanceVariableName:
+  Description: Checks for memoized methods whose instance variable name does not match the method name.
+  Enabled: false
+
 Naming/MethodName:
   Description: Use the configured style when naming methods.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-symbols-methods-vars
@@ -614,10 +619,6 @@ Naming/MethodName:
   SupportedStyles:
   - snake_case
   - camelCase
-
-Naming/MemoizedInstanceVariableName:
-  Description: Checks for memoized methods whose instance variable name does not match the method name.
-  Enabled: false
 
 Naming/PredicateName:
   Description: Check the names of predicate methods.
@@ -1361,5 +1362,5 @@ Style/WordArray:
   Description: Use %w or %W for arrays of words.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#percent-w
   Enabled: true
-  MinSize: 3
+  MinSize: 0
   WordRegex: !ruby/regexp /\A[\p{Word}]+\z/
