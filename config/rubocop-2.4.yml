@@ -103,6 +103,10 @@ Layout/EmptyLines:
   Description: Don't use several empty lines in a row.
   Enabled: true
 
+Layout/EmptyLineAfterGuardClause:
+  Description: Keep blank lines after guard clauses.
+  Enabled: false
+
 Layout/EmptyLinesAroundAccessModifier:
   Description: Keep blank lines around access modifiers.
   Enabled: true
@@ -567,6 +571,9 @@ Metrics/PerceivedComplexity:
   Max: 30
 
 ##################### Naming ##################################
+Naming/AccessorMethodName:
+  Description: Checks that accessor methods are named properly
+  Enabled: false
 
 Naming/AsciiIdentifiers:
   Description: Use only ascii symbols in identifiers.
@@ -608,6 +615,10 @@ Naming/MethodName:
   - snake_case
   - camelCase
 
+Naming/MemoizedInstanceVariableName:
+  Description: Checks for memoized methods whose instance variable name does not match the method name.
+  Enabled: false
+
 Naming/PredicateName:
   Description: Check the names of predicate methods.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#bool-methods-qmark
@@ -618,6 +629,14 @@ Naming/PredicateName:
   - have_
   NamePrefixBlacklist:
   - is_
+
+Naming/RescuedExceptionsVariableName:
+  Description: Checks rescued exceptions variables are named as expected.
+  Enabled: false
+
+Naming/UncommunicativeMethodParamName:
+  Description: Checks method parameter names for how descriptive they are
+  Enabled: false
 
 Naming/VariableName:
   Description: Use the configured style when naming variables.
@@ -1342,5 +1361,5 @@ Style/WordArray:
   Description: Use %w or %W for arrays of words.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#percent-w
   Enabled: true
-  MinSize: 0
+  MinSize: 3
   WordRegex: !ruby/regexp /\A[\p{Word}]+\z/
