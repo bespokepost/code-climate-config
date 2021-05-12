@@ -16,6 +16,9 @@ AllCops:
 
 #################### Layout ##############################
 
+Layout/BeginEndAlignment:
+  EnforcedStyleAlignWith: begin
+
 Layout/DotPosition:
   EnforcedStyle: trailing
 
@@ -82,6 +85,9 @@ Naming/MethodParameterName:
 Naming/RescuedExceptionsVariableName:
   Enabled: false
 
+Naming/VariableNumber:
+  Enabled: false
+
 ##################### Performance #############################
 
 # No overrides
@@ -126,6 +132,13 @@ Style/ClassVars:
 
 Style/CollectionMethods:
   Enabled: true
+  PreferredMethods:
+    collect: 'map'
+    collect!: 'map!'
+    inject: 'reduce'
+    find: 'detect'
+    find_all: 'select'
+    member?: 'include?'
 
 Style/ColonMethodCall:
   Enabled: false
