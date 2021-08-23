@@ -44,6 +44,10 @@ Lint/FlipFlop:
 Metrics/AbcSize:
   Max: 30
 
+Metrics/BlockLength:
+  Exclude:
+    - 'app/admin/**/*'
+
 Metrics/BlockNesting:
   Max: 4
 
