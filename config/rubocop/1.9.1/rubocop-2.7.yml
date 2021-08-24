@@ -16,9 +16,6 @@ AllCops:
 
 #################### Layout ##############################
 
-Layout/BeginEndAlignment:
-  EnforcedStyleAlignWith: begin
-
 Layout/DotPosition:
   EnforcedStyle: trailing
 
@@ -46,7 +43,10 @@ Metrics/AbcSize:
 
 Metrics/BlockLength:
   Exclude:
-    - 'app/admin/**/*'
+    - 'app/admin/*.rb'
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
 
 Metrics/BlockNesting:
   Max: 4
