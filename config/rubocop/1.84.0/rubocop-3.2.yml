@@ -3,7 +3,7 @@ inherit_from:
   - rubocop-performance.default.yml
   - rubocop-rails.default.yml
 
-require:
+plugins:
   - rubocop-performance
   - rubocop-rails
 
@@ -12,7 +12,7 @@ AllCops:
   Exclude:
     - 'vendor/**/*'
     - 'tmp/**/*'
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.2
 
 #################### Layout ##############################
 
