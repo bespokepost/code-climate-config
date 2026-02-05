@@ -360,7 +360,7 @@ Rails/DelegateAllowBlank:
 
 Rails/DeprecatedActiveModelErrorsMethods:
   Description: 'Avoid manipulating ActiveModel errors hash directly.'
-  Enabled: pending
+  Enabled: true
   Severity: warning
   Safe: false
   VersionAdded: '2.14'
@@ -1127,7 +1127,7 @@ Rails/TransactionExitStatement:
   Description: 'Avoid the usage of `return`, `break` and `throw` in transaction blocks.'
   Reference:
     - https://github.com/rails/rails/commit/15aa4200e083
-  Enabled: pending
+  Enabled: true
   VersionAdded: '2.14'
   TransactionMethods: []
 
